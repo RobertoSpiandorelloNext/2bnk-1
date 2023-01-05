@@ -32,7 +32,7 @@ export const Sidebar = () => (
         <Stack spacing={{ base: '5', sm: '6' }} shouldWrapChildren>
           <Logo />
           <Stack spacing="1">
-            <NavButton label="Dashboard" icon={FiBarChart2} />
+            <NavButton label="Dashboard" icon={FiBarChart2}  />
             <NavButton label="Usuários" icon={FiUsers} />
             <NavButton label="Customização" icon={FiLayout} aria-current="page" />
             <NavButton label="Notificações" icon={FiCheckSquare} />
