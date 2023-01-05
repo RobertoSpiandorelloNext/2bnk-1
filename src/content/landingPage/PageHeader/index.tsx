@@ -11,6 +11,7 @@ import {
     PopoverContent,
     PopoverTrigger,
     IconButton,
+    SimpleGrid,
     Text,
     useBreakpointValue,
     useColorModeValue
@@ -18,8 +19,10 @@ import {
 import { FiMenu } from 'react-icons/fi'
 import NextRouter from 'next/router'
 import { Logo } from 'src/components/Logo'
+import {PopoverIcon} from 'src/components/PopoverIcon'
+import { items } from './data'
 
-  
+ 
 function signIn(){NextRouter.push('auth/signIn')}
 function signUp(){NextRouter.push('auth/signUp')}
   
@@ -32,7 +35,34 @@ function PageHeader() {
               <Logo/> 
               {isDesktop ? (
                 <Flex justify="space-between" flex="1">
-                  <Button>Produtos</Button>
+                  <Popover trigger="hover" placement="bottom" gutter={12}>
+                    {({ isOpen }) => (
+                      <>
+                        <PopoverTrigger>
+                          <Button variant="link" rightIcon={<PopoverIcon isOpenPopup={isOpen} />}>
+                            Produtos
+                          </Button>
+                        </PopoverTrigger>
+                        <PopoverContent p="5" width={{ base: 'sm', md: '2xl' }}>
+                          <SimpleGrid columns={{ base: 1, md: 2 }} columnGap="6" rowGap="2">
+                            {items.map((item, id) => (
+                              <Link variant="menu" href={item.href} key={id}>
+                                <Stack spacing="4" direction="row" p="3">
+                                  <Icon as={item.icon} boxSize="6" color="accent" />
+                                  <Stack spacing="1">
+                                    <Text fontWeight="medium">{item.title}</Text>
+                                    <Text fontSize="sm" color="muted">
+                                      {item.description}
+                                    </Text>
+                                  </Stack>
+                                </Stack>
+                              </Link>
+                            ))}
+                          </SimpleGrid>
+                        </PopoverContent>
+                      </>
+                    )}
+                  </Popover>
 
                   <HStack spacing="3">
                     <Button variant="ghost" onClick={()=>signIn()}>Entrar</Button>  

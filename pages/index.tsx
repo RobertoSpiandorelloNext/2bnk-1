@@ -10,7 +10,7 @@ function Home() {
   return (
     <>
       <Head>
-        <title>2BNK</title>
+        <title>2BNK-Plataforma completa para seu produto</title>
         <meta name="description" content="2BNK - Framework completo para sua Fintech" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

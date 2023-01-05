@@ -11,11 +11,11 @@ export function Banner() {
         <Box maxW={{ base: 'xl', md: '7xl' }} mx="auto" px={{ base: '6', md: '8' }} color="white">
           <Box maxW="xl">
             <Heading as="h1" size="3xl" fontWeight="extrabold">
-              Seu MVP parou em pé ? 
-              Agora é hora de escalar o seu Produto.
+              Seu MVP Decolou? 
+              Bora de escalar seu produto!
             </Heading>
             <Text fontSize={{ md: '2xl' }} mt="4" maxW="lg">
-              2BNK é uma plataforma tecnológica para qualquer Startup estruturar um produto rápido, seguro e escalável.
+              2BNK é Plataforma Tecnológica robusta e totalmente escalável para dar asas aos seus sonhos.
             </Text>
             <Stack direction={{ base: 'column', md: 'row' }} mt="10" spacing="4">
               <Button
