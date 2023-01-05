@@ -11,6 +11,7 @@ function Home() {
         <title>2BNK - Plataforma completa para seu Produto Digital</title>
         <meta name="description" content="Governança, Segurança, Infraestrutura Escalável e uma arquiterura moderna que atende os mais rígidos padrões de conformidade do mercado." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#317EFB" />
         <meta property="og:description" content="Crie sua própria startup com uma sólida base de governança, segurança, arquitetura e infraestrutura." />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image" itemProp="image" content="https://www.2bnk.com/Logo.png" />
