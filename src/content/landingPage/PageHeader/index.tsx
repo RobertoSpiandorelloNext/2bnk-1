@@ -1,6 +1,7 @@
 import {
     Box,
     Button,
+    ButtonGroup,
     Container,
     Flex,
     HStack,
@@ -38,11 +39,16 @@ function PageHeader() {
                   <Popover trigger="hover" placement="bottom" gutter={12}>
                     {({ isOpen }) => (
                       <>
-                        <PopoverTrigger>
-                          <Button variant="link" rightIcon={<PopoverIcon isOpenPopup={isOpen} />}>
-                            Produtos
-                          </Button>
-                        </PopoverTrigger>
+                        <ButtonGroup variant="link" spacing="8">
+                          <PopoverTrigger>
+                            <Button variant="link" rightIcon={<PopoverIcon isOpenPopup={isOpen} />}>
+                              Produtos
+                            </Button>
+                          </PopoverTrigger>
+                          <Button variant="link" >
+                              Contato
+                            </Button>
+                        </ButtonGroup>
                         <PopoverContent p="5" width={{ base: 'sm', md: '2xl' }}>
                           <SimpleGrid columns={{ base: 1, md: 2 }} columnGap="6" rowGap="2">
                             {items.map((item, id) => (
@@ -60,6 +66,7 @@ function PageHeader() {
                             ))}
                           </SimpleGrid>
                         </PopoverContent>
+
                       </>
                     )}
                   </Popover>
