@@ -32,7 +32,7 @@ function PageHeader() {
               <Logo/> 
               {isDesktop ? (
                 <Flex justify="space-between" flex="1">
-   
+                  <Button>Produtos</Button>
 
                   <HStack spacing="3">
                     <Button variant="ghost" onClick={()=>signIn()}>Entrar</Button>  
