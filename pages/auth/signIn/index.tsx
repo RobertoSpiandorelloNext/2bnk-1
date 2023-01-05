@@ -17,10 +17,12 @@ import {
   import * as React from 'react'
   import { Logo } from 'src/components/Logo'
   import NextRouter from 'next/router'
-  import { OAuthButtonGroup } from './OAuthButtonGroup'
-  import { PasswordField } from './PasswordField'
+  import { OAuthButtonGroup } from 'src/content/auth/OAuthButtonGroup'
+  import { PasswordField } from 'src/content/auth/PasswordField'
+
   
   function signUp(){NextRouter.push('./signUp')}
+  function join(){NextRouter.push('../dashboard')}
 
   export default function Login() {
     return (
@@ -62,7 +64,7 @@ import {
               </Button>
             </HStack>
             <Stack spacing="6">
-              <Button variant="primary">Entrar</Button>
+              <Button variant="primary"  onClick={()=>join()}>Entrar</Button>
               <HStack>
                 <Divider />
                 <Text fontSize="sm" whiteSpace="nowrap" color="muted">

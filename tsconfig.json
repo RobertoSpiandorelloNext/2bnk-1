@@ -21,6 +21,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src", "pages/landingPage/CallToAction"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src", "src/content/landingPage/CallToAction"],
   "exclude": ["node_modules"]
 }

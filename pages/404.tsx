@@ -1,9 +1,8 @@
 import Head from 'next/head'
-import Footer from 'src/components/Footer';
-import { Banner } from 'src/content/landingPage/Banner';
-import PageHeader from 'src/content/landingPage/PageHeader';
-import { Features } from '../src/content/landingPage/Features/index';
 
+import Footer from 'src/components/Footer';
+import PageHeader from 'src/content/landingPage/PageHeader';
+import PageNotFound from 'src/content/status/404Status';
 
 
 function Home() {
@@ -16,8 +15,7 @@ function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageHeader/>
-      <Banner/>
-      <Features/>
+      <PageNotFound/>
       <Footer/>
     </>
   )
