@@ -1,14 +1,17 @@
 import {
   Button,
   Container,
+  Divider,
   FormControl,
   FormHelperText,
   FormLabel,
   Heading,
   HStack,
   Input,
+  Checkbox,
   Stack,
   Text,
+  Link,
   useBreakpointValue,
 } from '@chakra-ui/react'
 import * as React from 'react'
@@ -17,6 +20,7 @@ import { GoogleIcon } from 'src/content/auth/ProviderIcons'
 import NextRouter from 'next/router'
 
 function signIn(){NextRouter.push('./signIn')}
+function join(){NextRouter.push('../dashboard')}
 
 function SignUp() {
   return (
@@ -43,9 +47,17 @@ function SignUp() {
             <Input id="password" type="password" />
             <FormHelperText color="muted">Minimo 8 caracteres</FormHelperText>
           </FormControl>
+          <Checkbox >Concordo com os <Link >Termos de Uso</Link> e <Link >Privacidade</Link></Checkbox>
         </Stack>
         <Stack spacing="4">
-          <Button variant="primary">Criar Conta</Button>
+          <Button variant="primary"  onClick={()=>join()}>Criar Conta</Button>
+          <HStack>
+            <Divider />
+            <Text fontSize="sm" whiteSpace="nowrap" color="muted">
+              ou 
+            </Text>
+            <Divider />
+          </HStack>
           <Button variant="secondary" leftIcon={<GoogleIcon boxSize="5" />} iconSpacing="3">
             Cadastrar com Google
           </Button>

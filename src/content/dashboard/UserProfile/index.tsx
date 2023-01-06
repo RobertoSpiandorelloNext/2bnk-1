@@ -3,15 +3,18 @@ import {
     BoxProps,
     Button,
     Heading,
-    SimpleGrid,
     Stack,
     Text,
     useBreakpointValue,
     useColorModeValue,
+    Container, 
+    Tab, 
+    TabList, 
+    Tabs
   } from '@chakra-ui/react'
     import { FiDownloadCloud } from 'react-icons/fi'
-  
-  export const Content = () => (
+
+  export const UserProfileTab = () => (
 
     <Stack spacing={{ base: '8', lg: '6' }}>
       <Stack spacing="4" direction={{ base: 'column', lg: 'row' }} justify="space-between">
@@ -28,21 +31,20 @@ import {
           <Button variant="primary">Criar</Button>
         </Stack>
       </Stack>
-      <Stack spacing={{ base: '5', lg: '6' }}>
-        <SimpleGrid columns={{ base: 1, md: 3 }} gap="6">
-          <Card />
-          <Card />
-          <Card />
-        </SimpleGrid>
-      </Stack>
-      <Card minH="xs" />
-      <Stack spacing={{ base: '5', lg: '6' }}>
-        <SimpleGrid columns={{ base: 1, md: 3 }} gap="6">
-          <Card />
-          <Card />
-          <Card />
-        </SimpleGrid>
-      </Stack>
+      <Box as="section" bg="bg-surface">
+        <Container py={{ base: '4', md: '8' }}>
+          <Stack spacing="16">
+              <Tabs size='lg' variant="with-line">
+                <TabList>
+                  <Tab>Meus Dados</Tab>
+                  <Tab>Documentos</Tab>
+                  <Tab>Notificações</Tab>
+                  <Tab>Segurança</Tab>
+                </TabList>
+              </Tabs>
+          </Stack>
+        </Container>
+      </Box>
     </Stack>
   )
   

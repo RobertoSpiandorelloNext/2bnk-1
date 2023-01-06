@@ -17,7 +17,7 @@ import {
   import * as React from 'react'
   import { Logo } from 'src/components/Logo'
   import NextRouter from 'next/router'
-  import { OAuthButtonGroup } from 'src/content/auth/OAuthButtonGroup'
+  import { GoogleIcon } from 'src/content/auth/ProviderIcons'
   import { PasswordField } from 'src/content/auth/PasswordField'
 
   
@@ -68,11 +68,13 @@ import {
               <HStack>
                 <Divider />
                 <Text fontSize="sm" whiteSpace="nowrap" color="muted">
-                  ou continue com
+                  ou 
                 </Text>
                 <Divider />
               </HStack>
-              <OAuthButtonGroup />
+              <Button variant="secondary" leftIcon={<GoogleIcon boxSize="5" />} iconSpacing="3">
+                Entrar com Google
+              </Button>
             </Stack>
           </Stack>
         </Box>
